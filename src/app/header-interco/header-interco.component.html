@@ -1,0 +1,29 @@
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+      <!-- NOT CONNECTED-->
+      <div *ngIf ="!authStatus">
+        <div class="navbar-header">
+          <a class="navbar-brand">Veuillez vous connecter</a>
+        </div>
+      </div>
+      <!-- CONNECTED -->
+      <div *ngIf ="authStatus">
+        <div class="navbar-header">
+          <a class="navbar-brand">Bienvenue {{name}} (admin)</a>
+        </div>
+        <ul class="nav navbar-nav">
+          <li [ngClass]="{'active': isHome}"><a [routerLink]="['admin-home']">Accueil</a></li>
+          <li>
+              <a><div class="glyphicon glyphicon-user"></div><span> Mon profil</span></a>
+              <ul class="nav navbar-nav">
+                  <li><a>Gerer mes infos</a></li>
+                  <li><a (click)="exitApp()">Se déconnecter</a></li>
+              </ul>  
+          </li>
+        </ul>
+      </div>
+      <!--logo
+      <div class="navbar-rigth"><img alt="" class="logo" src="../assets/" width="100" height="50"/></div>
+      -->
+  </div>
+</nav>

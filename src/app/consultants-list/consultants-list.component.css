@@ -1,0 +1,86 @@
+table {
+border-right: 0px;
+border-collapse: collapse;
+width: 50%;
+}
+tbody th {
+font-family: monospace;
+width: 50%;
+padding: 5px;
+background-color: #f8f8f8;
+}
+
+tbody tr:hover th:not(.delete-button){
+    background-color: #777;
+    color:#f8f8f8;
+}
+
+.delete-button:hover {
+    color:red;
+}
+td {
+font-family: sans-serif;
+border: thin solid #6495ed;
+width: 50%;
+padding: 5px;
+text-align: center;
+background-color: #ffffff;
+}
+caption {
+font-family: sans-serif;
+}
+
+thead th{
+    color:#f8f8f8;
+    background-color: #777;
+    min-width: 100px;
+
+}
+
+.delete-button{
+    color:#777;
+    text-align: center;
+    background-color: white !important;
+}
+
+tbody .last-column {
+    //border-right: 3px solid #777;
+    //box-sizing: border-box;
+}
+
+/* Modal Content */
+.modal-delete {
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+.modal-delete-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 40%;
+}
+
+/* The Close Button */
+.close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}

@@ -1,0 +1,5 @@
+<div class="manage-consultant">
+    <!-- INUTILE ? <search-consultants></search-consultants> -->
+    <consultants-list [consultants] = "consultants" (consultantDeleted)="deleteConsultant($event)"></consultants-list>
+    <div [routerLink]="['new-consultant']" class="glyphicon glyphicon-plus"></div>
+</div>

@@ -1,0 +1,9 @@
+.glyphicon-plus{
+    font-size: 22px;
+    color:#777;
+}
+
+.glyphicon-plus:hover{
+    color:green;
+    font-size: 30px;
+}

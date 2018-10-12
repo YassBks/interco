@@ -1,0 +1,11 @@
+<h2> Salles d'intercontrat</h2>
+        <div>
+        <div *ngFor="let twoRooms of twosRooms; let i= index" class="two-room-space">
+            <div  *ngFor="let room of rooms;let j = index">
+                <div *ngIf="(j>=i*2) && (j<(i+1)*2)" class="one-room-space">
+                    <h4>{{room.name}}</h4>
+                    <room [consultants] = "consultantsByRoom[j]" [capacity] = "room.capacity"></room>
+                </div>    
+            </div>
+        </div>
+            

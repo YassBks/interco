@@ -1,0 +1,18 @@
+<div *ngFor="let room of rooms;let i = index">
+    <mat-form-field><input matInput (blur)="saveNewData(i)" id="name" [(ngModel)]="room.name"></mat-form-field>
+    <input [min]="minValue(room.id)" max="100" type="number" class="form-control" (change)="toogleDisplayError()" (blur)="saveNewData(i)" id="capacity" [(ngModel)]="room.capacity">
+    <button (click)="alertNotEmpty(room)" class="btn btn-danger">supprimer</button><div [ngStyle]="{'display':myAlert[i]? 'block':'none'}" class="error-message">Nombre de places incorrect.</div>
+</div>
+<button (click)="addRoom()">Ajouter une room</button>
+<!--<div *ngIf="displayErrorCapacity" class="error-message">L'un des nombre de places est incorrect. (supérieur à 100, ou inférieur au nombre de consultant déjà présent dans cette salle ou valeur non chiffrée)</div>-->
+
+<!-- The Modal -->
+<div id="myModal" *ngIf="popup" class="modal-delete">
+
+  <!-- Modal content -->
+  <div class="modal-delete-content">
+    <span class="close" (click)="toggleModal()">&times;</span>
+      <p>Cette salle contient des consultants, en effectuant cette action vous supprimez les consultants associés à cette salle, voulez vous  continuer ?</p>
+    <button type="button" (click)="toggleModal();deleteRoom()" class="btn btn-primary">Oui</button>
+  </div>
+</div>

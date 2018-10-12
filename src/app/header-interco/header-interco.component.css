@@ -1,0 +1,40 @@
+.navbar-rigth{
+     display: flex;
+     flex-direction:  row-reverse;
+}
+
+.container-fluid {
+    box-shadow: 0px 0px 15px #aaa;
+}
+.navigation{
+    justify-content: space-between;   
+}
+
+.navbar-brand{
+    margin-right: 35px;
+}
+
+li ul {
+    display:none;
+    z-index:1;
+}
+
+ul li a {
+    display:block;
+    white-space: nowrap;
+}
+
+ul li a:hover {
+    background-color: #e7e7e7;
+}
+
+li:hover > ul {
+    display:block;
+    position:absolute;
+    background-color: #f8f8f8;
+    box-shadow: 0px 0px 15px #aaa;
+}
+
+li:hover > ul a {
+    color:black;
+}

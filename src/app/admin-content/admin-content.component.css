@@ -1,0 +1,9 @@
+.dashboard{
+    display:flex;
+    justify-content: space-between;
+}
+
+.content{
+    display:block;
+    width: 100%;
+}

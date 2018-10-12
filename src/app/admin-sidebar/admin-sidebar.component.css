@@ -1,0 +1,25 @@
+.sidebar{
+    background-color: #f8f8f8;
+    border: 1px solid #e7e7e7;
+    margin-right: 30px;
+    margin-left: 10px;
+}
+
+.sidebar a {
+    display:block;
+    color:#777;
+    text-decoration: none;
+    padding: 6px 20px 6px 20px;
+    font-size: 17px;
+    min-width: 175px;
+}
+
+.sidebar a:hover{
+    color:black;
+    background-color: #e7e7e7;
+}
+
+.sidebar .active{
+    color: #555;
+    background-color: #e7e7e7;
+}

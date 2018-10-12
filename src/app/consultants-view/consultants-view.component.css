@@ -1,0 +1,30 @@
+.radio-buttons {
+    display:inline-block;
+}
+
+.row{
+    width:350px;
+    position: absolute;
+    left: 25%;
+}
+
+label {
+    margin-right: 30px;
+}
+
+.delete{
+    color:black;
+    background-color: white;
+}
+
+.col-sm-offset-2 {
+    margin-left: 0;
+}
+
+.btn.btn-light{
+    display:block !important;
+}
+
+.btn:hover.btn-light{
+    background-color: darkgray;
+}

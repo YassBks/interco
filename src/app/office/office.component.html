@@ -1,0 +1,16 @@
+<div class="office"> 
+        <div *ngIf="office.gender != 3">
+            <div class="icon" (click)="toConsultant(office.id)">
+                <div  class="consultant-miniature">
+                <img alt="" [src]="srcImg" width="50" height="50"/>
+                    <span class="tooltiptext">{{office.firstname + " " + office.lastname}}</span>
+                    </div>
+            </div>
+            <span class="name">{{office.lastname}}</span>
+        </div> 
+        <div *ngIf="office.gender == 3">
+            <div class="icon">
+                <img alt="" [src]="srcImg" width="50" height="50"/>
+            </div>
+        </div>
+</div>

@@ -1,0 +1,12 @@
+h2{
+    margin:0;
+}
+
+.two-room-space{
+    display:inline-flex;
+    padding: 20px;
+}
+
+.one-room-space{
+    display:block;
+}

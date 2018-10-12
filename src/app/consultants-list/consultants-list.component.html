@@ -1,0 +1,33 @@
+<table id="myTable" class="tablesorter">
+<thead>
+<tr>
+    <th>Nom</th>
+    <th>Prenom</th>
+    <th>Fonction</th>
+    <th>Début de l'intercontrat</th>
+</tr>
+</thead> 
+<tbody>
+<tr *ngFor="let consultant of consultants">
+    <th [routerLink]="[consultant.id]">{{ consultant.lastname}}</th>
+    <th [routerLink]="[consultant.id]">{{ consultant.firstname}}</th>
+    <th [routerLink]="[consultant.id]">{{ consultant.profession}}</th>
+    <th [routerLink]="[consultant.id]">{{ consultant.start_interco | date: 'dd/MM/yyyy'}}</th>
+    <th (click)="toggleModal();toDelete(consultant);" class="delete-button"><div class="glyphicon glyphicon-remove">
+    </div></th>
+</tr>
+</tbody>
+</table>
+
+
+<!-- The Modal -->
+<div id="myModal" *ngIf="popup" class="modal-delete">
+
+  <!-- Modal content -->
+  <div class="modal-delete-content">
+    <span class="close" (click)="toggleModal()">&times;</span>
+    <p>Etes vous sur de vouloir mettre fin à la période d'intercontrat de {{consultantToDelete.firstname}} {{consultantToDelete.lastname}}?</p>
+      <button type="button" (click)="toggleModal();deleteConsultantEvent()" class="btn btn-primary">Oui</button>
+  </div>
+
+</div>

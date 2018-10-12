@@ -1,0 +1,63 @@
+<div class="row">
+  <button (click)="goBack()" class="btn btn-light"><div class="glyphicon glyphicon-arrow-left"></div> retour</button>
+  <div class="col-sm-8 col-sm-offset-2">
+    <form [formGroup]="consultantForm" (ngSubmit)="onSubmitForm()">
+      <!-- INUTILE (changement de sexe)
+        <div class="form-group">
+            <select class="form-control" formControlName="gender" id="gender">
+              <option [selected]="consultant.gender==='m'"  class="form-control">Homme</option> 
+              <option [selected]="consultant.gender==='f'"  class="form-control">Femme</option>
+            </select>
+        </div> -->
+      <div class="form-group">
+        <label for="lastname">
+          Nom
+        </label>
+           <mat-form-field class="example-full-width">
+            <input matInput type="text" id="lastname" formControlName="lastname">
+          </mat-form-field>
+      </div>
+      <div class="form-group">
+        <label for="firstname">
+          Prénom
+        </label>
+          <mat-form-field>
+            <input type="text" matInput id="firstname" formControlName="firstname">
+          </mat-form-field>
+      </div>
+        <div class="form-group">
+            <label for="function">
+              Métier
+            </label>
+            <mat-form-field>
+                <mat-select formControlName="profession" id="profession">
+                  <mat-option   value="MOE">MOE</mat-option> 
+                  <mat-option   value="MOA">MOA</mat-option>
+                  <mat-option   value="INFRA">INFRA</mat-option>
+                </mat-select>
+            </mat-form-field>    
+        </div>
+        <div class="form-group">
+            <label for="room">Salle</label>
+            <mat-form-field>
+                <mat-select  formControlName="room" id="room">
+                  <mat-option *ngFor="let room of rooms" [value]="room.id">{{room.name}}</mat-option> 
+                </mat-select>
+            </mat-form-field>    
+        </div>
+        <!-- DATE DE DEBUT D'INTERCO-->
+        <mat-form-field> 
+            <input matInput [matDatepicker]="picker" formControlName="start_interco" id="start_interco" placeholder="Date de début d'intercontrat">
+            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+        </mat-form-field>
+        <div class="form-group">
+            <label for="infos">Plus d'infos</label>
+            <mat-form-field>
+                <textarea matInput placeholder="" formControlName="infos"></textarea>
+            </mat-form-field>
+        </div>
+      <button class="btn btn-primary" type="submit">Enregistrer</button>
+    </form>
+  </div>
+</div>
